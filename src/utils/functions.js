@@ -1,4 +1,8 @@
 import { curry, without, intersection, isEmpty, not } from 'ramda'
+import { validEmailRegEx } from "./constants"
+
+
+export const validateEmail = email => validEmailRegEx.test(email)
 
 export const extractExactAge = (birthday, referenceDate) => {
   var differenceInMilisecond = Date.parse(referenceDate) || Date.now() - Date.parse(birthday)

@@ -21,8 +21,8 @@ const useApolloLocalStorage = key => {
         data: { [key]: JSON.stringify(objValue || emptyObject) }
       })
     },
-    [data, client, key]
-  ) // eslint-disable-line react-hooks/exhaustive-deps
+    [ client, key, query, value]
+  ) 
 
   return [value, handleSetData]
 }
