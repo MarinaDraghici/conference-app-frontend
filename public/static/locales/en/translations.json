@@ -14,9 +14,14 @@
   "Forbidden": "Not allowed to see this page!",
   "NavBar": {
     "MyFirstMenu":"My First Menu",
-    "Dashboard": "Dashboard",
+    "Welcome": "Welcome",
     "Settings": "Settings"
   },
+  "LandingPage": {
+    "Title": "Welcome!",
+    "Subtitle": "Please enter your email:"
+  },
+  
   "Tooltips": {
     "Logout": "Logout",
     "HidePassword": "Hide password",

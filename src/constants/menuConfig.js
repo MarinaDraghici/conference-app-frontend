@@ -5,7 +5,7 @@ import HomeIcon from "@material-ui/icons/Home"
 
 
 const menuItems = [
-  { icon: <Dashboard />, text: 'NavBar.Dashboard', path: '/dashboard', name: 'Dashboard', roles: [], rights: [] },
+  { icon: <HomeIcon />, text: 'NavBar.Welcome', path: '/welcome', name: 'Welcome', roles: [], rights: [] },
   { icon: <HomeIcon />, text: 'NavBar.MyFirstMenu', path: '/helloWorld', name: 'MyFirstMenu', roles: [], rights: [] },
   {
     icon: <Settings />,
