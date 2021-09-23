@@ -15,12 +15,17 @@
   "NavBar": {
     "MyFirstMenu":"My First Menu",
     "Welcome": "Welcome",
-    "Settings": "Settings"
+    "Settings": "Settings",
+    "Conferences": "Conferences"
   },
   "LandingPage": {
     "Title": "Welcome!",
     "Subtitle": "Please enter your email:",
     "BadEmail": "This is not a valid email!"
+  },
+  "UserMenu":{
+
+    "User":"User"
   },
   
   "Tooltips": {
@@ -37,6 +42,27 @@
     "MinDateMessage": "Date should not be before minimal date",
     "MaxDateMessage": "Date should not be after maximal date"
   },
+
+  "Conferences": {
+    "Filters": {
+      "StartDate": "Start date",
+      "EndDate": "End date"
+    },
+    "Speaker": "Speaker:",
+    "Attend": "Attend",
+    "Join": "Join",
+    "Withdraw": "Withdraw",
+    "StatusNotSet": "Not attending"
+  },
+
+  "General": {
+    "Buttons": {
+      "ApplyFilters": "Apply filters",
+      "ResetFilters": "Reset filters"
+    }
+  },
+
+
   "Validations": {
     "Cnp": "The value is not a valid identifier number",
     "UniqueCnp": "The identifier number is not unique",
@@ -59,3 +85,4 @@
     }
   }
 }
+
