@@ -16,7 +16,8 @@
     "MyFirstMenu":"My First Menu",
     "Welcome": "Welcome",
     "Settings": "Settings",
-    "Conferences": "Conferences"
+    "Conferences": "Conferences",
+    "MyConferences": "My Conferences"
   },
   "LandingPage": {
     "Title": "Welcome!",
@@ -52,13 +53,18 @@
     "Attend": "Attend",
     "Join": "Join",
     "Withdraw": "Withdraw",
-    "StatusNotSet": "Not attending"
+    "StatusNotSet": "Not attending",
+   
   },
 
   "General": {
     "Buttons": {
       "ApplyFilters": "Apply filters",
-      "ResetFilters": "Reset filters"
+      "ResetFilters": "Reset filters",
+      "AddConference": "Add Conference",
+      "Save": "Save",
+      "AddSpeaker": "Add speaker",
+      "DeleteSpeaker": "Delete speaker"
     }
   },
 
@@ -83,6 +89,36 @@
       "MinCharacters": "The length must be greater than {{min}}",
       "Unique": "The value of {{selector}} must be unique"
     }
+  },
+  "Conference":{
+    "Info":"Info",
+    "Name":"Name",
+    "StartDate":"StartDate",
+    "EndDate":"EndDate",
+    "Type":"Type",
+    "Category":"Category",
+    "Speakers" : "Speakers",
+    "Location" : "Location"
+
+  },
+  "MyConferences": {
+    "Edit": "Edit",
+    "Delete": "Delete"
+  },
+  "Location": {
+    "Name": "Name",
+    "Address": "Address",
+    "Country": "Country",
+    "County": "County",
+    "City": "City",
+    "Latitude": "Latitude",
+    "Longitude": "Longitude"
+  },
+  "Speaker": {
+    "Name": "Name",
+    "Nationality": "Nationality",
+    "Rating": "Rating",
+    "MainSpeaker": "Main Speaker"
   }
 }
 
