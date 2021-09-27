@@ -1,7 +1,7 @@
 import { curry, without, intersection, isEmpty, not } from 'ramda'
 import { validEmailRegEx } from "./constants"
 import moment from 'moment'
-import { Today } from '@material-ui/icons'
+//import { Today } from '@material-ui/icons'
 
 
 export const validateEmail = email => validEmailRegEx.test(email)

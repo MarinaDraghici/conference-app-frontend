@@ -1,4 +1,4 @@
-import React from 'react'
+import React, { useCallback } from 'react'
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
 import { Info, LocationOn, Face } from '@material-ui/icons'
@@ -10,8 +10,10 @@ import MyConferenceSpeakers from './MyConferenceSpeakers';
 import MyConferenceInfo from './MyConferenceInfo'
 
 const MyConference = (props) => {
-    const { types, categories, countries, counties, cities } = props
+    const { types, categories, countries, counties, cities, conference, dispatch } = props
+    const {location, speakers } = conference
     const { t } = useTranslation()
+    const handleAddSpeaker = useCallback(()=>{dispatch({type: 'addSpeaker'})})
 
     return <>
         <IconCard
@@ -21,6 +23,8 @@ const MyConference = (props) => {
                 <MyConferenceInfo
                     types={types}
                     categories={categories}
+                    conference={conference}
+                    dispatch={dispatch}
                 />
             }
         />
@@ -32,6 +36,8 @@ const MyConference = (props) => {
                     countries={countries}
                     counties={counties}
                     cities={cities}
+                    location={location}
+                    dispatch={dispatch}
                 />
             }
         />
@@ -40,11 +46,11 @@ const MyConference = (props) => {
             title={
                 <CardTitle
                     title={t("Conference.Speakers")}
-                    actions={[<AddButton key='addButton' title={t("General.Buttons.AddSpeaker")} />]}
+                    actions={[<AddButton key='addButton' title={t("General.Buttons.AddSpeaker")} onClick={handleAddSpeaker}/>]}
                 />
             }
             content={
-                <MyConferenceSpeakers
+                <MyConferenceSpeakers speakers= {speakers} dispatch={dispatch}
                 />
             }
         />
@@ -56,7 +62,9 @@ MyConference.propTypes = {
     categories: PropTypes.array,
     countries: PropTypes.array,
     counties: PropTypes.array,
-    cities: PropTypes.array
+    cities: PropTypes.array,
+    conference: PropTypes.object.isRequired,
+    dispatch: PropTypes.func.isRequired
 }
 
 export default MyConference

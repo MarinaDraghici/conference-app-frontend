@@ -36,6 +36,7 @@ return (
     <CustomRoute isPrivate={false} exact path='/conferences' component={ConferenceListContainer} />
     <CustomRoute isPrivate={false} exact path='/myConferences' component={MyConferenceListContainer} />
     <CustomRoute isPrivate={false} exact path='/myConferences/:id(new)' component={MyConferenceContainer} />
+    <CustomRoute isPrivate={false} exact path='/myConferences/:id(\d+)' component={MyConferenceContainer} />
     <CustomRoute isPrivate={false} exact path='/forbidden' component={Forbidden} />
     <CustomRoute isPrivate={false} render={() => <NotFound title='PageNotFound'></NotFound>} />
     
