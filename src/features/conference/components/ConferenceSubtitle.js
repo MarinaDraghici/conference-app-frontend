@@ -8,22 +8,22 @@ import RoomIcon from '@material-ui/icons/Room';
 
 
 const ConferenceSubtitle = (props) => {
-    const {speaker, location} = props
-    const {t} = useTranslation();
-    return <Grid container item lg = {12}>
+    const { speaker, location } = props
+    const { t } = useTranslation();
+    return <Grid container item lg={12}>
         <Grid item lg={1}>
-                <PermIdentityIcon />
+            <PermIdentityIcon />
         </Grid>
         <Grid item lg={11}>
-                <Typography>{t('Conferences.Speaker')}</Typography>
-                <Typography>{speaker?.name}</Typography>
+            <Typography>{t('Conferences.Speaker')}</Typography>
+            <Typography>{speaker?.name}</Typography>
         </Grid>
         <Grid item lg={1}>
-                <RoomIcon />
-            </Grid>
-            <Grid item lg={11}>
-                <Typography>{`${location?.city.name}, ${location?.county.name}, ${location?.country.name}`}</Typography>
-            </Grid>
+            <RoomIcon />
+        </Grid>
+        <Grid item lg={11}>
+            <Typography>{`${location?.city.name}, ${location?.county.name}, ${location?.country.name}`}</Typography>
+        </Grid>
     </Grid>
 }
 

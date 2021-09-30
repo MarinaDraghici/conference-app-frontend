@@ -90,6 +90,10 @@
       "Edit": "Editeaza",
       "Delete": "Sterge"
     },
+    "ConferencePage": {
+      "startDate": "Data de incepere",
+      "endDate": "Data de incheiere"
+    },
     "Location": {
   "Name": "Nume",
   "Address": "Adresa",

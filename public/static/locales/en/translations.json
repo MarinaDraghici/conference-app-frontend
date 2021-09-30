@@ -56,7 +56,10 @@
     "StatusNotSet": "Not attending"
    
   },
-
+  "ConferencePage": {
+    "startDate": "Start Date",
+    "endDate": "End Date"
+  },
   "General": {
     "Buttons": {
       "ApplyFilters": "Apply filters",

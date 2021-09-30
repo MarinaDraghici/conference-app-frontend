@@ -7,22 +7,22 @@ import ConferenceSubtitle from './ConferenceSubtitle';
 import ConferenceContent from './ConferenceContent';
 
 
-const ConferenceItem=props=> {
-    const {conference} = props
-    const { name,location, speakers } = conference
+const ConferenceItem = props => {
+    const { conference } = props
+    const { name, location, speakers } = conference
     const speaker = speakers.find(speaker => speaker.isMainSpeaker)
 
     return (< RegularCard cardTitle={name} cardSubtitle={
-    <ConferenceSubtitle 
-        speaker={speaker} 
-        location={location}/>
-    }  
-    content={
-        <ConferenceContent
-            conference={conference}
-        />
+        <ConferenceSubtitle
+            speaker={speaker}
+            location={location} />
     }
-/>)
+        content={
+            <ConferenceContent
+                conference={conference}
+            />
+        }
+    />)
 }
 ConferenceItem.propTypes = {
     conference: PropTypes.object.isRequired
