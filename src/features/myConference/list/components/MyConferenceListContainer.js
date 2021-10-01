@@ -38,6 +38,7 @@ const MyConferenceListContainer = () => {
         }
     })
 
+
     const handleAddClick = useCallback(() => {
         history.push("myConferences/new")
     }, [history])
@@ -56,7 +57,7 @@ const MyConferenceListContainer = () => {
             setFooter(null)
         }
         // eslint-disable-line react-hooks/exhaustive-deps
-    }, [])
+    }, [setFooter, setHeader])
 
     useEffect(() => {
         setHeader(
@@ -65,7 +66,7 @@ const MyConferenceListContainer = () => {
                 actions={<AddButton key='addButton' title={t("General.Buttons.AddConference")} onClick={handleAddClick} />}
             />
         )
-    }, [setHeader, t])
+    }, [handleAddClick, setHeader, t])
 
     useEffect(() => {
         setFooter(<Pagination

@@ -36,9 +36,7 @@ export const CONFERENCE_LIST_QUERY = gql`
           }
         }
         speakers {
-          id
-          name
-          isMainSpeaker
+          ...speaker
         }
         status(userEmail: $email) {
           id
@@ -48,4 +46,5 @@ export const CONFERENCE_LIST_QUERY = gql`
     }
   }
   ${Fragments.conference}
+  ${Fragments.speaker}
 `

@@ -1,4 +1,4 @@
-import React, { useCallback } from 'react'
+import React from 'react'
 import PropTypes from 'prop-types'
 import { useTranslation } from 'react-i18next'
 import CustomTextField from '@bit/totalsoft_oss.react-mui.custom-text-field'

@@ -8,13 +8,9 @@ import Welcome from 'features/welcome/Welcome'
 import HelloWorld from 'features/helloWorld/HelloWorld'
 import Settings from 'features/settings/Settings'
 import { Forbidden, NotFound } from '@bit/totalsoft_oss.react-mui.kit.core'
-import identityUserRoles from 'constants/identityUserRoles'
-import permissions from 'constants/permissions'
 import { useEmail } from 'hooks/useEmail'
-const { globalAdmin, admin, user } = identityUserRoles
-const { viewSettings } = permissions
 import MyConferenceContainer from 'features/myConference/edit/components/MyConferenceContainer'
-import MyConferenceContent from 'features/myConference/list/components/MyConferenceContent'
+
 
 export default function AppRoutes() {
   const [email]=useEmail()

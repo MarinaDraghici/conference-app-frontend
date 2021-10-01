@@ -16,7 +16,7 @@ const MyConferenceSpeakerData = (props) => {
     const {id, name, nationality, rating, isMainSpeaker} = speaker
     const { t } = useTranslation()
     const classes = useStyles()
-    const handleDelete = useCallback(() => dispatch({ type: 'deleteSpeaker', payload: speaker.id }), [dispatch], speaker.id)
+    const handleDelete = useCallback(() => dispatch({ type: 'deleteSpeaker', payload: speaker.id }), [dispatch, speaker.id])
     //const handleDispatch = type => value => dispatch({type, payload:{id, [type]:value}})
     //const handleNameChange = useCallback(event=> dispatch({type:'speakerName', payload:{id, name:event.target.value}}), [dispatch, id])
     const handleGeneralDispatch = (type,prop) => value => dispatch({type, payload:{id, [prop]:value}})

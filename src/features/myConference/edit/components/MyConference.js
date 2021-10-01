@@ -13,8 +13,9 @@ const MyConference = (props) => {
     const { types, categories, countries, counties, cities, conference, dispatch } = props
     const {location, speakers } = conference
     const { t } = useTranslation()
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     const handleAddSpeaker = useCallback(()=>{dispatch({type: 'addSpeaker'})})
-
+ 
     return <>
         <IconCard
             icon={Info}

@@ -1,5 +1,4 @@
 import React from 'react'
-import Dashboard from '@material-ui/icons/Dashboard'
 import Settings from '@material-ui/icons/Settings'
 import HomeIcon from "@material-ui/icons/Home"
 import EventIcon from '@material-ui/icons/Event'
