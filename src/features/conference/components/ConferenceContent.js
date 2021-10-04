@@ -7,14 +7,14 @@ import Typography from '@bit/totalsoft_oss.react-mui.typography'
 import Button from '@bit/totalsoft_oss.react-mui.button'
 
 const ConferenceContent = (props) => {
-    const { conference } = props
+    const { conference, onAttend } = props
     const { status, startDate, endDate, type, category } = conference
     const { t } = useTranslation()
     const noStatusSet = t('Conferences.StatusNotSet')
 
     const showJoin = status?.id === state.Attended
     const showWithdraw = status?.id === state.Attended || status?.id === state.Joined
-    const showAttend = status?.id === state.Withdrawn
+    const showAttend = status?.id === state.Withdrawn || !status
 
     const startDateFormatted = t('DATE_FORMAT', { date: { value: startDate, format: 'DD-MM-YYYY HH:mm' } })
     const endDateFormatted = t('DATE_FORMAT', { date: { value: endDate, format: 'DD-MM-YYYY HH:mm' } })
@@ -35,7 +35,7 @@ const ConferenceContent = (props) => {
                 <Grid item xs={12}>
                     {showJoin && <Button right color="success" size={"sm"}>{t('Conferences.Join')}</Button>}
                     {showWithdraw && <Button right color="danger" size={"sm"}>{t('Conferences.Withdraw')}</Button>}
-                    {showAttend && <Button right color="info" size={"sm"}>{t('Conferences.Attend')}</Button>}
+                    {showAttend && <Button onClick={onAttend(conference?.id)} right color="info" size={"sm"}>{t('Conferences.Attend')} </Button> }
                 </Grid>
             </Grid>
         </Grid>
@@ -44,7 +44,8 @@ const ConferenceContent = (props) => {
 
 
 ConferenceContent.propTypes = {
-    conference: PropTypes.object.isRequired
+    conference: PropTypes.object.isRequired,
+    onAttend: PropTypes.func
     // shape({a: PropTypes.func, t: PropTypes.string, s:PropTypes.object}) varianta pentru forma obiectului
 }
 

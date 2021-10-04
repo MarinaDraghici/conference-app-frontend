@@ -23,7 +23,7 @@ const MyConferenceListContainer = () => {
     const [filters, setFilters] = useState(generateDefaultFilters())
     const history = useHistory()
     const [email] = useEmail()
-    const [pager, setPager]=useState({ totalCount: 0, page: 0, pageSize: 3 })
+    const [pager, setPager] = useState({ totalCount: 0, page: 0, pageSize: 3 })
     const [, setFooter] = useFooter()
 
     const { data, loading, refetch } = useQueryWithErrorHandling(CONFERENCE_LIST_QUERY, {
@@ -56,8 +56,8 @@ const MyConferenceListContainer = () => {
             setHeader(null)
             setFooter(null)
         }
-        // eslint-disable-line react-hooks/exhaustive-deps
-    }, [setFooter, setHeader])
+
+    }, [])// eslint-disable-line react-hooks/exhaustive-deps
 
     useEffect(() => {
         setHeader(
@@ -78,14 +78,14 @@ const MyConferenceListContainer = () => {
             onPageChange={handlePageChange}
             onRefresh={refetch}
         />)
-        }, [handlePageChange, handleRowsPerPageChange, pager.page, pager.pageSize, pager.totalCount, refetch, setFooter])
+    }, [handlePageChange, handleRowsPerPageChange, pager.page, pager.pageSize, pager.totalCount, refetch, setFooter])
     const handleApplyFilters = useCallback((value) => {
         setFilters(value)
     }, [])
 
 
-    if (loading || !data) 
-    return <LoadingFakeText lines={10} />
+    if (loading || !data)
+        return <LoadingFakeText lines={10} />
     return (
         <>
             <MyConferenceFilters filters={filters} onApplyFilters={handleApplyFilters} />
@@ -93,6 +93,6 @@ const MyConferenceListContainer = () => {
         </>
     )
 
-    }
+}
 
 export default MyConferenceListContainer

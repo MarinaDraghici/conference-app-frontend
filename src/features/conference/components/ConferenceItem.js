@@ -7,7 +7,7 @@ import ConferenceContent from './ConferenceContent';
 
 
 const ConferenceItem = props => {
-    const { conference } = props
+    const { conference, onAttend } = props
     const { name, location, speakers } = conference
     const speaker = speakers.find(speaker => speaker.isMainSpeaker)
 
@@ -18,12 +18,13 @@ const ConferenceItem = props => {
     }
         content={
             <ConferenceContent
-                conference={conference}
+                conference={conference} onAttend={onAttend}
             />
         }
     />)
 }
 ConferenceItem.propTypes = {
-    conference: PropTypes.object.isRequired
+    conference: PropTypes.object.isRequired,
+    onAttend: PropTypes.func
 }
 export default ConferenceItem
