@@ -7,10 +7,10 @@ import Typography from '@bit/totalsoft_oss.react-mui.typography'
 import Button from '@bit/totalsoft_oss.react-mui.button'
 
 const ConferenceContent = (props) => {
-    const { conference, onAttend } = props
+    const { conference, onAttend, onWithdraw, onJoin} = props
     const { status, startDate, endDate, type, category } = conference
     const { t } = useTranslation()
-    const noStatusSet = t('Conferences.StatusNotSet')
+    const noStatusSet = t('StatusNotSet')
 
     const showJoin = status?.id === state.Attended
     const showWithdraw = status?.id === state.Attended || status?.id === state.Joined
@@ -33,9 +33,9 @@ const ConferenceContent = (props) => {
             </Grid>
             <Grid container spacing={2}>
                 <Grid item xs={12}>
-                    {showJoin && <Button right color="success" size={"sm"}>{t('Conferences.Join')}</Button>}
-                    {showWithdraw && <Button right color="danger" size={"sm"}>{t('Conferences.Withdraw')}</Button>}
-                    {showAttend && <Button onClick={onAttend(conference?.id)} right color="info" size={"sm"}>{t('Conferences.Attend')} </Button> }
+                    {showJoin && <Button onClick={onJoin(conference?.id)} right color="success" size={"sm"}>{t('Conferences.Join')} </Button>}
+                    {showWithdraw && <Button onClick={onWithdraw(conference?.id)} right color="danger" size={"sm"}>{t('Conferences.Withdraw')}</Button>}
+                    {showAttend && <Button right color="info" size={"sm"} onClick={onAttend(conference?.id)}>{t('Conferences.Attend')}</Button>}
                 </Grid>
             </Grid>
         </Grid>
@@ -45,7 +45,9 @@ const ConferenceContent = (props) => {
 
 ConferenceContent.propTypes = {
     conference: PropTypes.object.isRequired,
-    onAttend: PropTypes.func
+    onAttend: PropTypes.func.isRequired,
+    onWithdraw:PropTypes.func.isRequired,
+    onJoin: PropTypes.func.isRequired
     // shape({a: PropTypes.func, t: PropTypes.string, s:PropTypes.object}) varianta pentru forma obiectului
 }
 

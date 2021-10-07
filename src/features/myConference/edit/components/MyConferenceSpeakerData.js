@@ -17,8 +17,6 @@ const MyConferenceSpeakerData = (props) => {
     const { t } = useTranslation()
     const classes = useStyles()
     const handleDelete = useCallback(() => dispatch({ type: 'deleteSpeaker', payload: speaker.id }), [dispatch, speaker.id])
-    //const handleDispatch = type => value => dispatch({type, payload:{id, [type]:value}})
-    //const handleNameChange = useCallback(event=> dispatch({type:'speakerName', payload:{id, name:event.target.value}}), [dispatch, id])
     const handleGeneralDispatch = (type,prop) => value => dispatch({type, payload:{id, [prop]:value}})
     return (
         <Tr>
@@ -38,8 +36,8 @@ const MyConferenceSpeakerData = (props) => {
             <Td className={classes.tableContent}>
                 <CustomTextField
                     fullWidth
-                    isNumeric
                     value={rating}
+                    isNumeric
                     onChange={handleGeneralDispatch('rating', 'rating')}
                 />
             </Td>

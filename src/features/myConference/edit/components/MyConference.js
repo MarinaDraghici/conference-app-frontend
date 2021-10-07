@@ -10,7 +10,7 @@ import MyConferenceSpeakers from './MyConferenceSpeakers';
 import MyConferenceInfo from './MyConferenceInfo'
 
 const MyConference = (props) => {
-    const { types, categories, countries, counties, cities, conference, dispatch } = props
+    const { types, categories, countries, counties, cities, conference, dispatch} = props
     const {location, speakers } = conference
     const { t } = useTranslation()
     // eslint-disable-next-line react-hooks/exhaustive-deps

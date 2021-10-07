@@ -40,20 +40,19 @@ export const reducer = (state, action) => {
             const minId = Math.min(...state.speakers.map(s => s.id), 0)
             return {
                 ...state,
-                speakers: [...state.speakers, { id: minId - 1, name: emptyString, nationality: emptyString, rating: emptyString }]
+                speakers: [...state.speakers, { id: minId - 1, name: emptyString, nationality: emptyString, rating: emptyString}]
             }
         }
         case 'resetConference':
             return action.payload
     
-        case 'deleteSpeaker': {
-            return {
-                ...state,
-                speakers: state.speakers.filter(s => s.id !== action.payload),
-                // speakers: state.speakers |> filter (propEq('id', action.payload)),
-                deletedSpeakers: action.payload > 0 ? [...state.deletedSpeakers, action.payload] : state.deletedSpeakers
-            }
-        }
+            case 'deleteSpeaker': {
+                return {
+                  ...state,
+                  speakers: state.speakers.filter(s => s.id !== action.payload),
+                  deletedSpeakers: action.payload > 0 ? [...state.deletedSpeakers, action.payload] : state.deletedSpeakers
+                }
+              }
         case 'speakerName':
             return {
                 ...state,

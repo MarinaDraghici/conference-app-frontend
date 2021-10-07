@@ -28,9 +28,8 @@ const MyConferenceSpeakers = (props) => {
         <Tbody>
         {speakers?.map((speaker) => (
                     <MyConferenceSpeakerData
-                        key={speaker.id}
+                        key={speaker?.id}
                         speaker={speaker}
-                       
                         dispatch={dispatch}
                     />
                 ))}
@@ -43,7 +42,7 @@ const MyConferenceSpeakers = (props) => {
  
 MyConferenceSpeakers.propTypes= {
     speakers: PropTypes.array,
-    dispatch: PropTypes.func.isRequired
+    dispatch: PropTypes.func
 }
  
 MyConferenceSpeakers.defaultProps = {

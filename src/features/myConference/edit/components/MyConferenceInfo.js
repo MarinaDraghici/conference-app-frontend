@@ -20,10 +20,10 @@ return (
         </Grid>
         <Grid item lg = {12} container spacing = {3}>
             <Grid item lg = {3} sm = {6} xs = {12}>
-                <DateTime label = {t('Conference.StartDate')} showTime = {true} value = {startDate} onChange={handleChange('startDate')}/>
+                <DateTime label = {t('Conference.StartDate')} showTime = {true} value = {startDate} views={['date','hours','minutes']} onChange={handleChange('startDate')}/>
             </Grid>
             <Grid item lg = {3} sm = {6} xs = {12}>
-                <DateTime label = {t('Conference.EndDate')} showTime = {true} value = {endDate} onChange={handleChange('endDate')}/>
+                <DateTime label = {t('Conference.EndDate')} showTime = {true} value = {endDate} views={['date','hours','minutes']} onChange={handleChange('endDate')}/>
             </Grid>
             <Grid item lg = {3} sm = {6} xs = {12}>
                 <Autocomplete label = {t('Conference.Type')} createdLabel = 'ConferenceType' fullWidth isClearable options = {types} value = {type} onChange={handleChange('type')} />

@@ -12,23 +12,78 @@
   "DECIMAL2": "{{number,intlDecimal2}}",
   "MyProfile": "My Profile",
   "Forbidden": "Not allowed to see this page!",
+  "General": {
+    "Buttons": {
+      "ApplyFilters": "Apply filters",
+      "ResetFilters": "Reset filters",
+      "AddConference": "Add Conference",
+      "Save": "Save",
+      "AddSpeaker": "Add speaker",
+      "DeleteSpeaker": "Delete speaker"
+    },
+    "SuggestedConferences":"Based on your choice, we suggest the following conferences:"
+  },
   "NavBar": {
-    "MyFirstMenu":"My First Menu",
-    "Welcome": "Welcome",
+    "MyFirstMenu": "My First Menu",
     "Settings": "Settings",
+    "Welcome": "Welcome",
     "Conferences": "Conferences",
     "MyConferences": "My Conferences"
   },
   "LandingPage": {
     "Title": "Welcome!",
-    "Subtitle": "Please enter your email:",
+    "Subtitle": "Please enter your e-mail:",
     "BadEmail": "This is not a valid email!"
   },
-  "UserMenu":{
-
-    "User":"User"
+  "Conferences": {
+    "Filters": {
+      "startDate": "Start date",
+      "endDate": "End date"
+    },
+    "Speaker": "Speaker : ",
+    "Attend": "Attend",
+    "Join": "Join",
+    "Withdraw": "Withdraw",
+    "StatusNotSet": "Not attending",
+    "SuccessfullyAttended":"Congratulations! You successfully attended to the conference! You will be notified to join 5 minutes before it starts.",
+    "QRCodeMessage": "You successfully attended to the conference! You will be notified to join 5 minutes before it starts. Use the following code to access the conference: {{code}}",
+    "SuccessfullyWithdrawn": "Successfully Withdrawn!",
+    "SuccessfullyJoined":"You successfully joined the conference!"
+  },
+  "MyConferences": {
+    "Edit": "Edit",
+    "Delete": "Delete",
+    "SavingSucceeded": "Conference was successfully saved"
   },
   
+  "Conference": {
+    "Info": "Conference Info",
+    "Location": "Location",
+    "Speakers": "Speakers",
+    "Name": "Conference name",
+    "StartDate": "Start date",
+    "EndDate": "End date",
+    "Type": "Conference type",
+    "Category": "Category"
+  },
+  "Speaker": {
+    "Name": "Name",
+    "Nationality": "Nationality",
+    "Rating": "Rating",
+    "MainSpeaker": "Main Speaker"
+  },
+  "Location": {
+    "Name": "Name",
+    "Address": "Address",
+    "Country": "Country",
+    "County": "County",
+    "City": "City",
+    "Latitude": "Latitude",
+    "Longitude": "Longitude"
+  },
+  "UserMenu": {
+    "User": "User"
+  },
   "Tooltips": {
     "Logout": "Logout",
     "HidePassword": "Hide password",
@@ -43,37 +98,6 @@
     "MinDateMessage": "Date should not be before minimal date",
     "MaxDateMessage": "Date should not be after maximal date"
   },
-
-  "Conferences": {
-    "Filters": {
-      "StartDate": "Start date",
-      "EndDate": "End date"
-    },
-    "Speaker": "Speaker:",
-    "Attend": "Attend",
-    "Join": "Join",
-    "Withdraw": "Withdraw",
-    "StatusNotSet": "Not attending",
-    "SuccessfullyAttended":"Congratulations! You successfully attended to the conference! You will be notified to join 5 minutes before it starts.",
-    "QRCodeMessage":"You successfully attended to the conference! You will be notified to join 5 minutes before it starts. Use the following code to access the conference: {{code}}" 
-  },
-  "ConferencePage": {
-    "startDate": "Start Date",
-    "endDate": "End Date"
-  },
-  "General": {
-    "Congratulations":"Congratulations",
-    "Buttons": {
-      "ApplyFilters": "Apply filters",
-      "ResetFilters": "Reset filters",
-      "AddConference": "Add Conference",
-      "Save": "Save",
-      "AddSpeaker": "Add speaker",
-      "DeleteSpeaker": "Delete speaker"
-    }
-  },
-
-
   "Validations": {
     "Cnp": "The value is not a valid identifier number",
     "UniqueCnp": "The identifier number is not unique",
@@ -94,36 +118,5 @@
       "MinCharacters": "The length must be greater than {{min}}",
       "Unique": "The value of {{selector}} must be unique"
     }
-  },
-  "Conference":{
-    "Info":"Info",
-    "Name":"Name",
-    "StartDate":"StartDate",
-    "EndDate":"EndDate",
-    "Type":"Type",
-    "Category":"Category",
-    "Speakers" : "Speakers",
-    "Location" : "Location"
-
-  },
-  "MyConferences": {
-    "Edit": "Edit",
-    "Delete": "Delete"
-  },
-  "Location": {
-    "Name": "Name",
-    "Address": "Address",
-    "Country": "Country",
-    "County": "County",
-    "City": "City",
-    "Latitude": "Latitude",
-    "Longitude": "Longitude"
-  },
-  "Speaker": {
-    "Name": "Name",
-    "Nationality": "Nationality",
-    "Rating": "Rating",
-    "MainSpeaker": "Main Speaker"
   }
 }
-

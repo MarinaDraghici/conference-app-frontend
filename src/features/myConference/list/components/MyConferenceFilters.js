@@ -29,10 +29,10 @@ const MyConferenceFilters = props => {
         content={
           <Grid container spacing={2} onKeyDown={handleKeyPressed}>
             <Grid item xs={12} lg={3}>
-              <DateTime label={t('ConferencePage.startDate')} value={startDate} onChange={setStartDate} clearable />
+              <DateTime label={t('Conferences.Filters.startDate')} value={startDate} onChange={setStartDate} clearable />
             </Grid>
             <Grid item xs={12} lg={3} >
-              <DateTime label={t('ConferencePage.endDate')} value={endDate} onChange={setEndDate} clearable/>
+              <DateTime label={t('Conferences.Filters.endDate')} value={endDate} onChange={setEndDate} clearable/>
             </Grid>
           </Grid>
         }
